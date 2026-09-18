@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad | Privacy Policy - Ride Delivery</title>
-    <meta name="description"
-        content="Política de privacidad oficial y protección de datos para la aplicación Ride Delivery en Google Play Store.">
+    <title>Eliminación de Cuenta y Datos | Account Deletion - Ride Delivery</title>
+    <meta name="description" content="Solicitud oficial de eliminación de cuenta y datos personales para usuarios y conductores de la app Ride Delivery en Google Play Store.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #004AAD;
             --primary-dark: #003380;
             --primary-light: #EBF3FF;
-            --success: #10B981;
-            --success-light: #ECFDF5;
+            --danger: #EF4444;
+            --danger-dark: #DC2626;
+            --danger-light: #FEF2F2;
             --text-main: #1E293B;
             --text-muted: #64748B;
             --bg: #F8FAFC;
@@ -135,15 +133,16 @@
             }
         }
 
-        .badge-updated {
+        .badge-danger {
             display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
+            background: var(--danger-light);
+            color: var(--danger-dark);
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             padding: 4px 12px;
             border-radius: 20px;
             margin-bottom: 12px;
+            border: 1px solid #FECACA;
         }
 
         h2.title {
@@ -158,12 +157,23 @@
         .intro {
             font-size: 15px;
             color: var(--text-muted);
-            margin-bottom: 28px;
+            margin-bottom: 24px;
+        }
+
+        .alert-box {
+            background: var(--danger-light);
+            border: 1px solid #FECACA;
+            border-left: 5px solid var(--danger);
+            padding: 16px 20px;
+            border-radius: 12px;
+            color: #991B1B;
+            font-size: 14px;
+            margin: 20px 0;
         }
 
         .section {
-            margin-top: 32px;
-            padding-top: 24px;
+            margin-top: 28px;
+            padding-top: 22px;
             border-top: 1px solid var(--border);
         }
 
@@ -198,64 +208,107 @@
             flex-shrink: 0;
         }
 
-        p,
-        li {
-            font-size: 14.5px;
-            color: #334155;
-            margin-bottom: 10px;
+        .step-box {
+            background: #F8FAFC;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
         }
 
-        ul,
-        ol {
+        .step-box h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 14.5px;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        ul, ol {
             padding-left: 22px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         li {
             margin-bottom: 6px;
         }
 
-        .highlight-box {
-            background: var(--success-light);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            padding: 16px 20px;
-            border-radius: 12px;
-            color: #065F46;
-            font-size: 14px;
+        .table-responsive {
+            overflow-x: auto;
             margin: 16px 0;
         }
 
-        .highlight-box strong {
-            color: #047857;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            text-align: left;
         }
 
-        .alert-box {
-            background: #FEF3C7;
-            border: 1px solid #FCD34D;
-            padding: 16px 20px;
-            border-radius: 12px;
-            color: #92400E;
-            font-size: 14px;
-            margin: 16px 0;
-        }
-
-        .contact-card {
+        th {
             background: #F1F5F9;
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin-top: 14px;
+            color: #1E293B;
+            padding: 10px 14px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            color: #334155;
+        }
+
+        .badge-delete {
+            color: var(--danger-dark);
+            font-weight: 700;
+        }
+
+        .badge-keep {
+            color: #D97706;
+            font-weight: 600;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-action:hover {
+            background: var(--primary-dark);
+        }
+
+        .nav-links {
+            margin-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
             font-size: 14px;
         }
 
-        .contact-card p {
-            margin-bottom: 4px;
-            color: #1E293B;
-        }
-
-        .contact-card a {
+        .nav-links a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -275,7 +328,7 @@
                 <div class="brand-icon">R</div>
                 <div class="brand-text">
                     <h1>Ride Delivery</h1>
-                    <p>Servicio de Transporte Local / Local Transportation Service</p>
+                    <p>Desarrollado por La Casa Informática | Developed by La Casa Informática</p>
                 </div>
             </div>
             <div class="lang-toggle">
@@ -290,258 +343,206 @@
 
             <!-- ================= SPANISH VERSION ================= -->
             <div id="content-es">
-                <span class="badge-updated">Última actualización: Septiembre 2026</span>
-                <h2 class="title">Política de Privacidad</h2>
+                <span class="badge-danger">Eliminación de Cuenta y Datos (Google Play Compliance)</span>
+                <h2 class="title">Solicitud de Eliminación de Cuenta</h2>
                 <p class="intro">
-                    En <strong>Ride Delivery</strong> (operado por La Casa Informática) valoramos y respetamos tu
-                    privacidad. Esta Política de Privacidad describe de forma clara y transparente cómo recopilamos,
-                    utilizamos, almacenamos y protegemos la información personal y datos de ubicación de los usuarios
-                    (pasajeros) y colaboradores (conductores) en nuestra aplicación móvil y plataforma tecnológica.
+                    En <strong>Ride Delivery</strong> (operado por <strong>La Casa Informática</strong>), garantizamos plenamente a todos nuestros usuarios (pasajeros y choferes) el derecho a solicitar y ejecutar la eliminación definitiva de su cuenta de usuario y de todos los datos personales asociados en cualquier momento.
                 </p>
 
-                <!-- 1. Naturaleza del Servicio -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">1</span> Naturaleza de la Empresa y Servicio
-                    </h3>
-                    <p>
-                        <strong>Ride Delivery</strong> es una empresa que brinda servicios de transporte local y privado
-                        en su zona autorizada de operación. A diferencia de plataformas comisionistas masivas, Ride
-                        opera de manera directa con conductores colaboradores locales sin retener comisiones
-                        porcentuales por viaje, optimizando la asignación y coordinación de viajes a través de nuestra
-                        aplicación móvil.
-                    </p>
+                <div class="alert-box">
+                    <strong>⚠️ Acción Permanente:</strong> La eliminación de tu cuenta es definitiva e irreversible. Se eliminará tu acceso a la aplicación, tu perfil, saldo acumulado e historial de viajes.
                 </div>
 
-                <!-- 2. Información que Recopilamos -->
+                <!-- Método 1: En la App -->
                 <div class="section">
-                    <h3 class="section-title"><span class="section-num">2</span> Información que Recopilamos</h3>
-                    <p>Recopilamos únicamente los datos necesarios para brindar y coordinar el servicio de transporte:
-                    </p>
-                    <ul>
-                        <li><strong>Para Pasajeros:</strong> Nombre completo, número telefónico, correo electrónico y
-                            foto de perfil voluntaria.</li>
-                        <li><strong>Para Conductores:</strong> Nombre completo, correo, teléfono, fecha de nacimiento,
-                            código postal, licencia de conducir vigente de EE.UU., registro vehicular, póliza de seguro
-                            vehicular, antecedentes y los últimos 4 dígitos del Seguro Social (SSN) con fines de
-                            verificación de identidad.</li>
-                        <li><strong>Datos de Ubicación (GPS):</strong> Datos de geolocalización precisa mientras la
-                            aplicación está activa en primer plano para identificar puntos de recogida y destino,
-                            calcular rutas óptimas y monitorear el progreso del viaje en vivo.</li>
-                    </ul>
-                </div>
-
-                <!-- 3. Permiso de Ubicación -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">3</span> Uso de la Ubicación del Dispositivo
-                        (GPS)</h3>
-                    <p>
-                        El acceso a la ubicación es indispensable para el funcionamiento de Ride Delivery. Recopilamos
-                        los datos de ubicación:
-                    </p>
-                    <ul>
-                        <li>Para mostrar los vehículos disponibles cercanos al punto del pasajero.</li>
-                        <li>Para calcular la distancia, tiempo estimado y tarifa del viaje.</li>
-                        <li>Para brindar navegación y seguimiento en tiempo real de la ruta durante un viaje activo.
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>Transparencia:</strong> No recopilamos datos de ubicación cuando la aplicación se
-                        encuentra cerrada o el usuario no está en un servicio activo.
-                    </p>
-                </div>
-
-                <!-- 4. Compromiso de No Venta -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">4</span> Compromiso de No Venta de Información
-                    </h3>
-                    <div class="highlight-box">
-                        <strong>✓ Política Estricta de No Comercialización:</strong> Ride Delivery <strong>NO vende, NO
-                            alquila y NO comparte</strong> tu información personal, historial de viajes ni datos de
-                        ubicación a terceros, corredores de datos ni empresas de publicidad.
+                    <h3 class="section-title"><span class="section-num">1</span> Método 1: Eliminación directa desde la Aplicación Móvil</h3>
+                    <div class="step-box">
+                        <h4>Paso a paso dentro de la aplicación Ride Delivery:</h4>
+                        <ol>
+                            <li>Abre la app <strong>Ride Delivery</strong> en tu dispositivo móvil.</li>
+                            <li>Inicia sesión con tus credenciales (correo o número de teléfono).</li>
+                            <li>Dirígete a tu <strong>Perfil</strong> (icono en la parte inferior derecha).</li>
+                            <li>Entra en <strong>Ajustes</strong> / <strong>Configuración</strong>.</li>
+                            <li>Desplázate hacia abajo y toca el botón rojo <strong>"Eliminar Cuenta Definitivamente"</strong>.</li>
+                            <li>Confirma la advertencia de seguridad. Tu cuenta y datos personales serán borrados inmediatamente de nuestros servidores.</li>
+                        </ol>
                     </div>
-                    <p>
-                        Tu información se transmite únicamente de manera cifrada a través de protocolos seguros
-                        HTTPS/SSL y se almacena en bases de datos protegidas con altos estándares de seguridad
-                        tecnológica.
-                    </p>
                 </div>
 
-                <!-- 5. Permisos de Cámara y Archivos -->
+                <!-- Método 2: Por Correo -->
                 <div class="section">
-                    <h3 class="section-title"><span class="section-num">5</span> Permisos de Cámara y Selección de Fotos
-                    </h3>
+                    <h3 class="section-title"><span class="section-num">2</span> Método 2: Solicitud por Correo Electrónico (Soporte)</h3>
                     <p>
-                        Nuestra aplicación solicita acceso a la cámara y al selector de fotos del sistema únicamente
-                        cuando el usuario decide subir o actualizar su foto de perfil, o cuando un conductor adjunta
-                        fotos de sus documentos reglamentarios (licencia, seguro, registro). La aplicación no accede a
-                        tus álbumes ni fotos personales sin tu acción explícita.
+                        Si no tienes acceso a la app o desinstalaste la aplicación previamente, puedes solicitar la eliminación manual a nuestro equipo de soporte:
                     </p>
-                </div>
-
-                <!-- 6. Eliminación de Cuenta y Datos -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">6</span> Derechos del Usuario y Eliminación de
-                        Cuenta</h3>
-                    <p>
-                        En cumplimiento con los requerimientos de seguridad de datos de Google Play, cualquier usuario o
-                        conductor tiene el derecho garantizado de solicitar la eliminación definitiva de su cuenta y
-                        todos sus datos asociados en cualquier momento:
-                    </p>
-                    <ul>
-                        <li><strong>Dentro de la aplicación:</strong> Ve a tu <em>Perfil &gt; Ajustes</em> y presiona el
-                            botón <strong>"Eliminar Cuenta Definitivamente"</strong>. Tu cuenta y datos se eliminarán de
-                            inmediato.</li>
-                        <li><strong>Por correo electrónico o soporte:</strong> Envía una solicitud a nuestro equipo
-                            indicando tu correo o teléfono registrado.</li>
-                    </ul>
-                    <p>
-                        Al solicitar la eliminación, se borrarán de forma permanente tu perfil, credenciales, historial
-                        de ubicaciones y fotos de documentos. Únicamente se conservarán los comprobantes contables
-                        legalmente exigidos por las autoridades tributarias aplicables.
-                    </p>
-                </div>
-
-                <!-- 7. Contacto -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">7</span> Contacto de Soporte y Privacidad</h3>
-                    <p>Si tienes cualquier pregunta, duda o solicitud con respecto a tus datos personales o esta
-                        política, puedes contactarnos:</p>
-                    <div class="contact-card">
-                        <p><strong>Entidad Responsable:</strong> Ride Delivery</p>
-                        <p><strong>Desarrollo:</strong> La Casa Informática</p>
-                        <p><strong>Correo electrónico de soporte:</strong> <a
-                                href="mailto:soporte@ridedelivery.com">soporte@ridedelivery.com</a></p>
-                        <p><strong>Operación:</strong> Servicio de Transporte Local en Estados Unidos</p>
+                    <div class="step-box">
+                        <h4>Envía un correo electrónico de solicitud:</h4>
+                        <ul>
+                            <li><strong>Destinatario:</strong> <a href="mailto:soporte@ridedelivery.com" style="color: var(--primary); font-weight: 600;">soporte@ridedelivery.com</a></li>
+                            <li><strong>Asunto:</strong> Solicitud de Eliminación de Cuenta - Ride Delivery</li>
+                            <li><strong>Cuerpo del mensaje:</strong> Por favor indica tu nombre completo, correo electrónico o número telefónico registrado para identificar y purgar tu cuenta.</li>
+                            <li><strong>Tiempo de respuesta:</strong> La solicitud se procesa y confirma en un plazo máximo de <strong>24 a 48 horas</strong> hábiles.</li>
+                        </ul>
+                        <a href="mailto:soporte@ridedelivery.com?subject=Solicitud%20de%20Eliminaci%C3%B3n%20de%20Cuenta%20-%20Ride%20Delivery&body=Deseo%20solicitar%20la%20eliminaci%C3%B3n%20definitiva%20de%20mi%20cuenta%20de%20Ride%20Delivery.%20Mi%20correo%20o%20tel%C3%A9fono%20registrado%20es:" class="btn-action">
+                            Redactar Correo de Solicitud
+                        </a>
                     </div>
+                </div>
+
+                <!-- Qué datos se eliminan y retienen -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">3</span> Tratamiento de Datos: Qué se Elimina y Qué se Retiene</h3>
+                    <p>En cumplimiento con las directivas de seguridad de Google Play, detallamos el destino de tus datos:</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Categoría de Dato</th>
+                                    <th>Estado tras la Solicitud</th>
+                                    <th>Plazo de Destrucción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Credenciales de Cuenta:</strong> Contraseña, tokens de acceso y sesión</td>
+                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
+                                    <td>Inmediato (0 días)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Datos de Contacto:</strong> Nombre, correo y teléfono</td>
+                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
+                                    <td>Inmediato (0 días)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fotos y Documentos:</strong> Foto de perfil, licencia, seguro y registro vehicular</td>
+                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
+                                    <td>Inmediato (0 días)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ubicación GPS y Rutas:</strong> Registros de coordenadas y trayectos pasados</td>
+                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
+                                    <td>Inmediato (0 días)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Comprobantes Contables:</strong> Registros numéricos de transacciones exigidos por leyes tributarias</td>
+                                    <td><span class="badge-keep">RETENIDO POR LEY</span> (Disociado/Anonimizado)</td>
+                                    <td>Período legal contable obligatorio (luego se destruye)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Navegación -->
+                <div class="nav-links">
+                    <a href="index.html">&larr; Ver Política de Privacidad Completa</a>
+                    <a href="mailto:soporte@ridedelivery.com">Contactar a Soporte</a>
                 </div>
             </div>
 
             <!-- ================= ENGLISH VERSION ================= -->
             <div id="content-en" style="display: none;">
-                <span class="badge-updated">Last updated: September 2026</span>
-                <h2 class="title">Privacy Policy</h2>
+                <span class="badge-danger">Account & Data Deletion (Google Play Compliance)</span>
+                <h2 class="title">Account & Data Deletion Request</h2>
                 <p class="intro">
-                    At <strong>Ride Delivery</strong> (operated by La Casa Informática), we value and respect your
-                    privacy. This Privacy Policy clearly describes how we collect, use, store, and protect the personal
-                    data and location information of passengers and driver partners on our mobile application and
-                    technology platform.
+                    At <strong>Ride Delivery</strong> (operated by <strong>La Casa Informática</strong>), we fully guarantee all users (passengers and drivers) the right to request and execute the permanent deletion of their account and all associated personal data at any time.
                 </p>
 
-                <!-- 1. Nature of Service -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">1</span> Nature of the Company &amp; Service
-                    </h3>
-                    <p>
-                        <strong>Ride Delivery</strong> is a local and private transportation service operating within
-                        its authorized local zone. Unlike mass aggregator platforms, Ride operates directly with local
-                        partner drivers without charging commission percentages per ride, optimizing ride dispatch and
-                        coordination through our mobile app.
-                    </p>
+                <div class="alert-box">
+                    <strong>⚠️ Permanent Action:</strong> Account deletion is permanent and irreversible. You will lose access to the mobile application, your profile, accumulated balance, and ride history.
                 </div>
 
-                <!-- 2. Data We Collect -->
+                <!-- Method 1: In-App -->
                 <div class="section">
-                    <h3 class="section-title"><span class="section-num">2</span> Information We Collect</h3>
-                    <p>We collect only the information strictly required to coordinate and provide transportation
-                        services:</p>
-                    <ul>
-                        <li><strong>For Passengers:</strong> Full name, phone number, email address, and voluntary
-                            profile photo.</li>
-                        <li><strong>For Drivers:</strong> Full name, email, phone number, date of birth, postal code,
-                            valid U.S. Driver's License, vehicle registration, proof of insurance, background check
-                            record, and the last 4 digits of Social Security Number (SSN) for identity verification.
-                        </li>
-                        <li><strong>Location Data (GPS):</strong> Precise geolocation data while the app is in the
-                            foreground to detect pickup and destination points, calculate optimal routes, and track
-                            ongoing trip progress in real-time.</li>
-                    </ul>
-                </div>
-
-                <!-- 3. Location Access -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">3</span> Device Location Usage (GPS)</h3>
-                    <p>
-                        Location access is essential for Ride Delivery to function. We collect location data:
-                    </p>
-                    <ul>
-                        <li>To display available partner vehicles near the passenger's pickup location.</li>
-                        <li>To calculate distance, estimated time of arrival, and fare estimates.</li>
-                        <li>To provide live turn-by-turn route tracking during an active ride.</li>
-                    </ul>
-                    <p>
-                        <strong>Notice:</strong> We do not track or collect location data when the application is closed
-                        or when the user is not engaged in an active transportation service.
-                    </p>
-                </div>
-
-                <!-- 4. No Sale Policy -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">4</span> Data Protection &amp; No-Sale
-                        Commitment</h3>
-                    <div class="highlight-box">
-                        <strong>✓ Strict No-Sale Policy:</strong> Ride Delivery <strong>DOES NOT sell, rent, or
-                            trade</strong> your personal information, trip history, or location data to third parties,
-                        data brokers, or advertising networks.
+                    <h3 class="section-title"><span class="section-num">1</span> Method 1: Direct In-App Account Deletion</h3>
+                    <div class="step-box">
+                        <h4>Step-by-step instructions in the Ride Delivery application:</h4>
+                        <ol>
+                            <li>Open the <strong>Ride Delivery</strong> app on your mobile device.</li>
+                            <li>Sign in using your registered credentials (email or phone number).</li>
+                            <li>Navigate to your <strong>Profile</strong> screen (bottom-right navigation icon).</li>
+                            <li>Open <strong>Settings</strong>.</li>
+                            <li>Scroll down and tap the red button labeled <strong>"Eliminar Cuenta Definitivamente" (Delete Account Permanently)</strong>.</li>
+                            <li>Confirm the security prompt. Your account and personal information will be immediately deleted from our production servers.</li>
+                        </ol>
                     </div>
-                    <p>
-                        All sensitive information is encrypted in transit using bank-grade HTTPS/TLS protocols and
-                        stored in secure cloud infrastructure with strict access controls.
-                    </p>
                 </div>
 
-                <!-- 5. Camera & Photos -->
+                <!-- Method 2: By Email -->
                 <div class="section">
-                    <h3 class="section-title"><span class="section-num">5</span> Camera &amp; Photo Library Permissions
-                    </h3>
+                    <h3 class="section-title"><span class="section-num">2</span> Method 2: Request via Support Email</h3>
                     <p>
-                        Our app requests access to the camera and system photo picker solely when the user chooses to
-                        take or select a profile photo, or when a driver uploads photos of verification documents
-                        (driver's license, insurance, registration). The application never accesses personal albums
-                        without your explicit action.
+                        If you no longer have access to the app or previously uninstalled it, you can request manual account removal directly from our support desk:
                     </p>
-                </div>
-
-                <!-- 6. Account Deletion -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">6</span> User Rights &amp; Account Deletion</h3>
-                    <p>
-                        In compliance with Google Play Data Safety policies, any user or driver partner has the
-                        guaranteed right to request the permanent deletion of their account and associated personal data
-                        at any time:
-                    </p>
-                    <ul>
-                        <li><strong>In-App Deletion:</strong> Go to <em>Profile &gt; Settings</em> and tap the button
-                            <strong>"Eliminar Cuenta Definitivamente" (Delete Account Permanently)</strong>. Your
-                            account and personal data will be purged immediately.</li>
-                        <li><strong>Via Support Request:</strong> Send an email to our support team with your registered
-                            email or phone number.</li>
-                    </ul>
-                    <p>
-                        Upon deletion, your profile, authentication tokens, location logs, and document photos are
-                        permanently erased. Only necessary transaction receipts required by applicable tax or legal
-                        regulations are retained.
-                    </p>
-                </div>
-
-                <!-- 7. Contact -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">7</span> Privacy &amp; Support Contact</h3>
-                    <p>If you have any questions or requests regarding your personal data or this policy, please reach
-                        out to us:</p>
-                    <div class="contact-card">
-                        <p><strong>Service Provider:</strong> Ride Delivery</p>
-                        <p><strong>Developer:</strong> La Casa Informática</p>
-                        <p><strong>Support Email:</strong> <a
-                                href="mailto:soporte@ridedelivery.com">soporte@ridedelivery.com</a></p>
-                        <p><strong>Service Area:</strong> Local Transportation Service in the United States</p>
+                    <div class="step-box">
+                        <h4>Send a deletion request email:</h4>
+                        <ul>
+                            <li><strong>To:</strong> <a href="mailto:soporte@ridedelivery.com" style="color: var(--primary); font-weight: 600;">soporte@ridedelivery.com</a></li>
+                            <li><strong>Subject:</strong> Account Deletion Request - Ride Delivery</li>
+                            <li><strong>Message Content:</strong> Please include your full name, registered email address, or phone number so we can identify and purge your account.</li>
+                            <li><strong>Turnaround Time:</strong> Requests are confirmed and executed within <strong>24 to 48 business hours</strong>.</li>
+                        </ul>
+                        <a href="mailto:soporte@ridedelivery.com?subject=Account%20Deletion%20Request%20-%20Ride%20Delivery&body=I%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20Ride%20Delivery%20account%20and%20associated%20data.%20My%20registered%20email/phone%20is:" class="btn-action">
+                            Compose Deletion Request Email
+                        </a>
                     </div>
+                </div>
+
+                <!-- Data deletion table -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">3</span> Data Lifecycle: What Is Deleted vs. Retained</h3>
+                    <p>In full compliance with Google Play Data Safety specifications, here is the breakdown of handled data:</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data Category</th>
+                                    <th>Status upon Deletion</th>
+                                    <th>Purge Schedule</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Account Credentials:</strong> Password hashes, authentication tokens, session data</td>
+                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
+                                    <td>Immediate (0 days)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Personal Details:</strong> Full name, email address, phone number</td>
+                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
+                                    <td>Immediate (0 days)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Media & Documents:</strong> Profile photo, driver's license, insurance, registration photos</td>
+                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
+                                    <td>Immediate (0 days)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Location & Routes:</strong> GPS coordinates logs and historical routes</td>
+                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
+                                    <td>Immediate (0 days)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Financial Receipts:</strong> Transaction records required by tax authorities</td>
+                                    <td><span class="badge-keep">LEGALLY RETAINED</span> (Anonymized / Disassociated)</td>
+                                    <td>Mandatory statutory retention period only</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Navigation links -->
+                <div class="nav-links">
+                    <a href="index.html">&larr; View Full Privacy Policy</a>
+                    <a href="mailto:soporte@ridedelivery.com">Contact Support</a>
                 </div>
             </div>
 
         </div>
 
         <footer>
-            &copy; 2026 Ride Delivery. Todos los derechos reservados / All rights reserved.
+            &copy; 2026 Ride Delivery - La Casa Informática. Todos los derechos reservados / All rights reserved.
         </footer>
     </div>
 
