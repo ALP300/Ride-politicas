@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminación de Cuenta y Datos | Account Deletion - Ride Delivery</title>
-    <meta name="description" content="Solicitud oficial de eliminación de cuenta y datos personales para usuarios y conductores de la app Ride Delivery en Google Play Store.">
+    <meta name="description" content="Portal oficial para solicitar y ejecutar la eliminación definitiva de tu cuenta y datos en Ride Delivery.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -14,9 +14,11 @@
             --primary: #004AAD;
             --primary-dark: #003380;
             --primary-light: #EBF3FF;
-            --danger: #EF4444;
-            --danger-dark: #DC2626;
+            --danger: #DC2626;
+            --danger-dark: #B91C1C;
             --danger-light: #FEF2F2;
+            --success: #10B981;
+            --success-light: #ECFDF5;
             --text-main: #1E293B;
             --text-muted: #64748B;
             --bg: #F8FAFC;
@@ -34,14 +36,14 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
-            line-height: 1.65;
+            line-height: 1.6;
             padding-bottom: 60px;
         }
 
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 32px 20px;
+            padding: 30px 20px;
             box-shadow: 0 4px 20px rgba(0, 74, 173, 0.15);
         }
 
@@ -62,25 +64,24 @@
         }
 
         .brand-icon {
-            width: 48px;
-            height: 48px;
+            width: 46px;
+            height: 46px;
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 14px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            font-size: 24px;
+            font-size: 22px;
             color: #fff;
         }
 
         .brand-text h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.5px;
         }
 
         .brand-text p {
@@ -125,6 +126,7 @@
             border-radius: 20px;
             padding: 36px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
         }
 
         @media (max-width: 640px) {
@@ -147,40 +149,169 @@
 
         h2.title {
             font-family: 'Poppins', sans-serif;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             color: #0F172A;
-            margin-bottom: 14px;
-            letter-spacing: -0.5px;
+            margin-bottom: 10px;
         }
 
         .intro {
             font-size: 15px;
             color: var(--text-muted);
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
-        .alert-box {
-            background: var(--danger-light);
-            border: 1px solid #FECACA;
-            border-left: 5px solid var(--danger);
-            padding: 16px 20px;
-            border-radius: 12px;
-            color: #991B1B;
+        /* Interactive Deletion Form Box */
+        .deletion-box {
+            background: #FFF;
+            border: 2px solid #FECACA;
+            border-radius: 16px;
+            padding: 26px;
+            margin: 24px 0;
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+        }
+
+        .deletion-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: var(--danger-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 14.5px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-family: inherit;
+            color: var(--text-main);
+            transition: border-color 0.2s;
+            background-color: #F8FAFC;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #FFF;
+        }
+
+        .btn-submit-delete {
+            width: 100%;
+            background: var(--danger);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-submit-delete:hover:not(:disabled) {
+            background: var(--danger-dark);
+        }
+
+        .btn-submit-delete:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn-verify {
+            background: var(--primary);
+        }
+
+        .btn-verify:hover:not(:disabled) {
+            background: var(--primary-dark);
+        }
+
+        .btn-cancel {
+            width: 100%;
+            background: #E2E8F0;
+            color: #334155;
+            border: none;
+            padding: 10px 20px;
             font-size: 14px;
-            margin: 20px 0;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 8px;
         }
 
+        .alert-status {
+            padding: 14px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-top: 14px;
+            display: none;
+        }
+
+        .alert-error {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+            color: #991B1B;
+        }
+
+        .alert-success {
+            background: var(--success-light);
+            border: 1px solid #A7F3D0;
+            color: #065F46;
+        }
+
+        .confirm-panel {
+            background: #FEF2F2;
+            border: 1px solid #FCA5A5;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 16px 0;
+        }
+
+        .confirm-panel p {
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #7F1D1D;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #FFF;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Information section styles */
         .section {
             margin-top: 28px;
             padding-top: 22px;
             border-top: 1px solid var(--border);
-        }
-
-        .section:first-of-type {
-            border-top: none;
-            padding-top: 0;
-            margin-top: 0;
         }
 
         .section-title {
@@ -208,21 +339,6 @@
             flex-shrink: 0;
         }
 
-        .step-box {
-            background: #F8FAFC;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px 20px;
-            margin-bottom: 14px;
-        }
-
-        .step-box h4 {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 8px;
-        }
-
         p, li {
             font-size: 14.5px;
             color: #334155;
@@ -234,32 +350,24 @@
             margin-bottom: 12px;
         }
 
-        li {
-            margin-bottom: 6px;
-        }
-
-        .table-responsive {
-            overflow-x: auto;
-            margin: 16px 0;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 13.5px;
             text-align: left;
+            margin-top: 10px;
         }
 
         th {
             background: #F1F5F9;
             color: #1E293B;
-            padding: 10px 14px;
+            padding: 10px 12px;
             font-weight: 600;
             border-bottom: 2px solid var(--border);
         }
 
         td {
-            padding: 10px 14px;
+            padding: 10px 12px;
             border-bottom: 1px solid var(--border);
             color: #334155;
         }
@@ -267,28 +375,6 @@
         .badge-delete {
             color: var(--danger-dark);
             font-weight: 700;
-        }
-
-        .badge-keep {
-            color: #D97706;
-            font-weight: 600;
-        }
-
-        .btn-action {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-action:hover {
-            background: var(--primary-dark);
         }
 
         .nav-links {
@@ -305,10 +391,6 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
         }
 
         footer {
@@ -341,201 +423,229 @@
     <div class="container">
         <div class="card">
 
-            <!-- ================= SPANISH VERSION ================= -->
+            <!-- ================= SPANISH CONTENT ================= -->
             <div id="content-es">
-                <span class="badge-danger">Eliminación de Cuenta y Datos (Google Play Compliance)</span>
-                <h2 class="title">Solicitud de Eliminación de Cuenta</h2>
+                <span class="badge-danger">Google Play Data Safety Compliance</span>
+                <h2 class="title">Eliminación de Cuenta y Datos</h2>
                 <p class="intro">
-                    En <strong>Ride Delivery</strong> (operado por <strong>La Casa Informática</strong>), garantizamos plenamente a todos nuestros usuarios (pasajeros y choferes) el derecho a solicitar y ejecutar la eliminación definitiva de su cuenta de usuario y de todos los datos personales asociados en cualquier momento.
+                    Puedes eliminar tu cuenta de <strong>Ride Delivery</strong> directamente desde este formulario web en tiempo real, o siguiendo las instrucciones dentro de la aplicación móvil.
                 </p>
 
-                <div class="alert-box">
-                    <strong>⚠️ Acción Permanente:</strong> La eliminación de tu cuenta es definitiva e irreversible. Se eliminará tu acceso a la aplicación, tu perfil, saldo acumulado e historial de viajes.
-                </div>
-
-                <!-- Método 1: En la App -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">1</span> Método 1: Eliminación directa desde la Aplicación Móvil</h3>
-                    <div class="step-box">
-                        <h4>Paso a paso dentro de la aplicación Ride Delivery:</h4>
-                        <ol>
-                            <li>Abre la app <strong>Ride Delivery</strong> en tu dispositivo móvil.</li>
-                            <li>Inicia sesión con tus credenciales (correo o número de teléfono).</li>
-                            <li>Dirígete a tu <strong>Perfil</strong> (icono en la parte inferior derecha).</li>
-                            <li>Entra en <strong>Ajustes</strong> / <strong>Configuración</strong>.</li>
-                            <li>Desplázate hacia abajo y toca el botón rojo <strong>"Eliminar Cuenta Definitivamente"</strong>.</li>
-                            <li>Confirma la advertencia de seguridad. Tu cuenta y datos personales serán borrados inmediatamente de nuestros servidores.</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- Método 2: Por Correo -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">2</span> Método 2: Solicitud por Correo Electrónico (Soporte)</h3>
-                    <p>
-                        Si no tienes acceso a la app o desinstalaste la aplicación previamente, puedes solicitar la eliminación manual a nuestro equipo de soporte:
+                <!-- Interactive Web Deletion Form -->
+                <div class="deletion-box">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        Portal Directo de Eliminación de Cuenta
+                    </h3>
+                    <p style="font-size: 13.5px; color: #64748B; margin-bottom: 16px;">
+                        Ingresa las credenciales de tu cuenta registrada para autenticarte y solicitar el borrado inmediato de tus datos en nuestros servidores.
                     </p>
-                    <div class="step-box">
-                        <h4>Envía un correo electrónico de solicitud:</h4>
-                        <ul>
-                            <li><strong>Destinatario:</strong> <a href="mailto:soporte@ridedelivery.com" style="color: var(--primary); font-weight: 600;">soporte@ridedelivery.com</a></li>
-                            <li><strong>Asunto:</strong> Solicitud de Eliminación de Cuenta - Ride Delivery</li>
-                            <li><strong>Cuerpo del mensaje:</strong> Por favor indica tu nombre completo, correo electrónico o número telefónico registrado para identificar y purgar tu cuenta.</li>
-                            <li><strong>Tiempo de respuesta:</strong> La solicitud se procesa y confirma en un plazo máximo de <strong>24 a 48 horas</strong> hábiles.</li>
-                        </ul>
-                        <a href="mailto:soporte@ridedelivery.com?subject=Solicitud%20de%20Eliminaci%C3%B3n%20de%20Cuenta%20-%20Ride%20Delivery&body=Deseo%20solicitar%20la%20eliminaci%C3%B3n%20definitiva%20de%20mi%20cuenta%20de%20Ride%20Delivery.%20Mi%20correo%20o%20tel%C3%A9fono%20registrado%20es:" class="btn-action">
-                            Redactar Correo de Solicitud
-                        </a>
+
+                    <!-- Step 1: Login / Verify Form -->
+                    <div id="step-auth-es">
+                        <div class="form-group">
+                            <label for="input-email-es">Correo Electrónico Registrado:</label>
+                            <input type="email" id="input-email-es" class="form-input" placeholder="ejemplo@correo.com" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-pass-es">Contraseña:</label>
+                            <input type="password" id="input-pass-es" class="form-input" placeholder="Tu contraseña" autocomplete="current-password">
+                        </div>
+                        <button type="button" id="btn-verify-es" class="btn-submit-delete btn-verify" onclick="verifyAndAuthenticate('es')">
+                            <span>Verificar Identidad para Continuar</span>
+                        </button>
                     </div>
+
+                    <!-- Step 2: Confirmation Prompt -->
+                    <div id="step-confirm-es" style="display: none;">
+                        <div class="confirm-panel">
+                            <p><strong>Usuario Identificado:</strong> <span id="user-name-es">-</span></p>
+                            <p><strong>Correo:</strong> <span id="user-email-es">-</span></p>
+                            <p style="margin-top: 10px; font-weight: 700; color: #991B1B;">
+                                ¿Estás completamente seguro de que deseas eliminar permanentemente tu cuenta? Esta acción destruirá tu perfil, historial de viajes y acceso de forma irreversible.
+                            </p>
+                        </div>
+                        <button type="button" id="btn-delete-es" class="btn-submit-delete" onclick="executeAccountDeletion('es')">
+                            <span>Sí, Eliminar Mi Cuenta Definitivamente</span>
+                        </button>
+                        <button type="button" class="btn-cancel" onclick="resetForm('es')">Cancelar y Salir</button>
+                    </div>
+
+                    <!-- Status Alerts -->
+                    <div id="alert-error-es" class="alert-status alert-error"></div>
+                    <div id="alert-success-es" class="alert-status alert-success"></div>
                 </div>
 
-                <!-- Qué datos se eliminan y retienen -->
+                <!-- Section 2: Instructions In-App -->
                 <div class="section">
-                    <h3 class="section-title"><span class="section-num">3</span> Tratamiento de Datos: Qué se Elimina y Qué se Retiene</h3>
-                    <p>En cumplimiento con las directivas de seguridad de Google Play, detallamos el destino de tus datos:</p>
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Categoría de Dato</th>
-                                    <th>Estado tras la Solicitud</th>
-                                    <th>Plazo de Destrucción</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Credenciales de Cuenta:</strong> Contraseña, tokens de acceso y sesión</td>
-                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
-                                    <td>Inmediato (0 días)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Datos de Contacto:</strong> Nombre, correo y teléfono</td>
-                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
-                                    <td>Inmediato (0 días)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Fotos y Documentos:</strong> Foto de perfil, licencia, seguro y registro vehicular</td>
-                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
-                                    <td>Inmediato (0 días)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Ubicación GPS y Rutas:</strong> Registros de coordenadas y trayectos pasados</td>
-                                    <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
-                                    <td>Inmediato (0 días)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Comprobantes Contables:</strong> Registros numéricos de transacciones exigidos por leyes tributarias</td>
-                                    <td><span class="badge-keep">RETENIDO POR LEY</span> (Disociado/Anonimizado)</td>
-                                    <td>Período legal contable obligatorio (luego se destruye)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h3 class="section-title"><span class="section-num">1</span> ¿Cómo eliminar la cuenta desde la App Móvil?</h3>
+                    <ol>
+                        <li>Abre la aplicación <strong>Ride Delivery</strong> en tu teléfono.</li>
+                        <li>Inicia sesión con tu cuenta.</li>
+                        <li>Toca el icono de <strong>Perfil</strong> (abajo a la derecha) &gt; <strong>Ajustes</strong>.</li>
+                        <li>Presiona el botón rojo <strong>"Eliminar Cuenta Definitivamente"</strong> y confirma.</li>
+                        <li>Tu cuenta y datos se eliminan en ese mismo instante.</li>
+                    </ol>
                 </div>
 
-                <!-- Navegación -->
+                <!-- Section 3: Data Lifecycle Table -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">2</span> Datos que se eliminan vs. se conservan</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Información</th>
+                                <th>Acción al Eliminar</th>
+                                <th>Plazo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nombre, correo y teléfono</td>
+                                <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
+                                <td>Inmediato (0 días)</td>
+                            </tr>
+                            <tr>
+                                <td>Contraseña y sesiones activas</td>
+                                <td><span class="badge-delete">PURGADO DEFINITIVAMENTE</span></td>
+                                <td>Inmediato (0 días)</td>
+                            </tr>
+                            <tr>
+                                <td>Foto de perfil y documentos</td>
+                                <td><span class="badge-delete">ELIMINADO PERMANENTEMENTE</span></td>
+                                <td>Inmediato (0 días)</td>
+                            </tr>
+                            <tr>
+                                <td>Historial de geolocalización GPS</td>
+                                <td><span class="badge-delete">BORRADO DEFINITIVAMENTE</span></td>
+                                <td>Inmediato (0 días)</td>
+                            </tr>
+                            <tr>
+                                <td>Comprobantes contables exigidos por ley</td>
+                                <td style="color: #D97706; font-weight: 600;">RETENIDO POR LEY (Disociado)</td>
+                                <td>Período tributario exigido</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Navigation -->
                 <div class="nav-links">
                     <a href="index.html">&larr; Ver Política de Privacidad Completa</a>
-                    <a href="mailto:soporte@ridedelivery.com">Contactar a Soporte</a>
+                    <a href="mailto:soporte@ridedelivery.com">soporte@ridedelivery.com</a>
                 </div>
             </div>
 
-            <!-- ================= ENGLISH VERSION ================= -->
+            <!-- ================= ENGLISH CONTENT ================= -->
             <div id="content-en" style="display: none;">
-                <span class="badge-danger">Account & Data Deletion (Google Play Compliance)</span>
-                <h2 class="title">Account & Data Deletion Request</h2>
+                <span class="badge-danger">Google Play Data Safety Compliance</span>
+                <h2 class="title">Account & Data Deletion</h2>
                 <p class="intro">
-                    At <strong>Ride Delivery</strong> (operated by <strong>La Casa Informática</strong>), we fully guarantee all users (passengers and drivers) the right to request and execute the permanent deletion of their account and all associated personal data at any time.
+                    You can request and execute the permanent deletion of your <strong>Ride Delivery</strong> account directly through this live web portal, or via the mobile application settings.
                 </p>
 
-                <div class="alert-box">
-                    <strong>⚠️ Permanent Action:</strong> Account deletion is permanent and irreversible. You will lose access to the mobile application, your profile, accumulated balance, and ride history.
-                </div>
-
-                <!-- Method 1: In-App -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">1</span> Method 1: Direct In-App Account Deletion</h3>
-                    <div class="step-box">
-                        <h4>Step-by-step instructions in the Ride Delivery application:</h4>
-                        <ol>
-                            <li>Open the <strong>Ride Delivery</strong> app on your mobile device.</li>
-                            <li>Sign in using your registered credentials (email or phone number).</li>
-                            <li>Navigate to your <strong>Profile</strong> screen (bottom-right navigation icon).</li>
-                            <li>Open <strong>Settings</strong>.</li>
-                            <li>Scroll down and tap the red button labeled <strong>"Eliminar Cuenta Definitivamente" (Delete Account Permanently)</strong>.</li>
-                            <li>Confirm the security prompt. Your account and personal information will be immediately deleted from our production servers.</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- Method 2: By Email -->
-                <div class="section">
-                    <h3 class="section-title"><span class="section-num">2</span> Method 2: Request via Support Email</h3>
-                    <p>
-                        If you no longer have access to the app or previously uninstalled it, you can request manual account removal directly from our support desk:
+                <!-- Interactive Web Deletion Form -->
+                <div class="deletion-box">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        Direct Account Deletion Portal
+                    </h3>
+                    <p style="font-size: 13.5px; color: #64748B; margin-bottom: 16px;">
+                        Enter your registered account credentials to authenticate and immediately trigger the purge of your data from our production databases.
                     </p>
-                    <div class="step-box">
-                        <h4>Send a deletion request email:</h4>
-                        <ul>
-                            <li><strong>To:</strong> <a href="mailto:soporte@ridedelivery.com" style="color: var(--primary); font-weight: 600;">soporte@ridedelivery.com</a></li>
-                            <li><strong>Subject:</strong> Account Deletion Request - Ride Delivery</li>
-                            <li><strong>Message Content:</strong> Please include your full name, registered email address, or phone number so we can identify and purge your account.</li>
-                            <li><strong>Turnaround Time:</strong> Requests are confirmed and executed within <strong>24 to 48 business hours</strong>.</li>
-                        </ul>
-                        <a href="mailto:soporte@ridedelivery.com?subject=Account%20Deletion%20Request%20-%20Ride%20Delivery&body=I%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20Ride%20Delivery%20account%20and%20associated%20data.%20My%20registered%20email/phone%20is:" class="btn-action">
-                            Compose Deletion Request Email
-                        </a>
+
+                    <!-- Step 1: Login / Verify Form -->
+                    <div id="step-auth-en">
+                        <div class="form-group">
+                            <label for="input-email-en">Registered Email Address:</label>
+                            <input type="email" id="input-email-en" class="form-input" placeholder="name@example.com" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-pass-en">Password:</label>
+                            <input type="password" id="input-pass-en" class="form-input" placeholder="Your password" autocomplete="current-password">
+                        </div>
+                        <button type="button" id="btn-verify-en" class="btn-submit-delete btn-verify" onclick="verifyAndAuthenticate('en')">
+                            <span>Verify Identity to Proceed</span>
+                        </button>
                     </div>
+
+                    <!-- Step 2: Confirmation Prompt -->
+                    <div id="step-confirm-en" style="display: none;">
+                        <div class="confirm-panel">
+                            <p><strong>Identified User:</strong> <span id="user-name-en">-</span></p>
+                            <p><strong>Email:</strong> <span id="user-email-en">-</span></p>
+                            <p style="margin-top: 10px; font-weight: 700; color: #991B1B;">
+                                Are you sure you want to permanently delete your account? This action is irreversible and will erase your profile, ride history, and system access.
+                            </p>
+                        </div>
+                        <button type="button" id="btn-delete-en" class="btn-submit-delete" onclick="executeAccountDeletion('en')">
+                            <span>Yes, Delete My Account Permanently</span>
+                        </button>
+                        <button type="button" class="btn-cancel" onclick="resetForm('en')">Cancel</button>
+                    </div>
+
+                    <!-- Status Alerts -->
+                    <div id="alert-error-en" class="alert-status alert-error"></div>
+                    <div id="alert-success-en" class="alert-status alert-success"></div>
                 </div>
 
-                <!-- Data deletion table -->
+                <!-- Section 2: Instructions In-App -->
                 <div class="section">
-                    <h3 class="section-title"><span class="section-num">3</span> Data Lifecycle: What Is Deleted vs. Retained</h3>
-                    <p>In full compliance with Google Play Data Safety specifications, here is the breakdown of handled data:</p>
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Data Category</th>
-                                    <th>Status upon Deletion</th>
-                                    <th>Purge Schedule</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Account Credentials:</strong> Password hashes, authentication tokens, session data</td>
-                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
-                                    <td>Immediate (0 days)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Personal Details:</strong> Full name, email address, phone number</td>
-                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
-                                    <td>Immediate (0 days)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Media & Documents:</strong> Profile photo, driver's license, insurance, registration photos</td>
-                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
-                                    <td>Immediate (0 days)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Location & Routes:</strong> GPS coordinates logs and historical routes</td>
-                                    <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
-                                    <td>Immediate (0 days)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Financial Receipts:</strong> Transaction records required by tax authorities</td>
-                                    <td><span class="badge-keep">LEGALLY RETAINED</span> (Anonymized / Disassociated)</td>
-                                    <td>Mandatory statutory retention period only</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h3 class="section-title"><span class="section-num">1</span> How to delete account within the mobile app?</h3>
+                    <ol>
+                        <li>Open the <strong>Ride Delivery</strong> app on your device.</li>
+                        <li>Sign in with your registered account.</li>
+                        <li>Go to <strong>Profile</strong> (bottom right) &gt; <strong>Settings</strong>.</li>
+                        <li>Tap the red button labeled <strong>"Eliminar Cuenta Definitivamente" (Delete Account Permanently)</strong> and confirm.</li>
+                        <li>Your account is instantly purged from our servers.</li>
+                    </ol>
                 </div>
 
-                <!-- Navigation links -->
+                <!-- Section 3: Data Lifecycle Table -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">2</span> Deleted vs. Retained Data</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Deletion Action</th>
+                                <th>Timeframe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Full name, email, and phone number</td>
+                                <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
+                                <td>Immediate (0 days)</td>
+                            </tr>
+                            <tr>
+                                <td>Password hash and active sessions</td>
+                                <td><span class="badge-delete">PURGED DEFINITIVELY</span></td>
+                                <td>Immediate (0 days)</td>
+                            </tr>
+                            <tr>
+                                <td>Profile photo and driver documents</td>
+                                <td><span class="badge-delete">PERMANENTLY DELETED</span></td>
+                                <td>Immediate (0 days)</td>
+                            </tr>
+                            <tr>
+                                <td>GPS coordinates and route history</td>
+                                <td><span class="badge-delete">PURGED DEFINITIVELY</span></td>
+                                <td>Immediate (0 days)</td>
+                            </tr>
+                            <tr>
+                                <td>Statutory tax and financial receipts</td>
+                                <td style="color: #D97706; font-weight: 600;">LEGALLY RETAINED (Anonymized)</td>
+                                <td>Mandatory legal period only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Navigation -->
                 <div class="nav-links">
                     <a href="index.html">&larr; View Full Privacy Policy</a>
-                    <a href="mailto:soporte@ridedelivery.com">Contact Support</a>
+                    <a href="mailto:soporte@ridedelivery.com">soporte@ridedelivery.com</a>
                 </div>
             </div>
 
@@ -546,7 +656,11 @@
         </footer>
     </div>
 
+    <!-- Live Backend Logic Script -->
     <script>
+        const API_URL = "https://ride-backend-7g4c.onrender.com/api";
+        let activeAuthToken = null;
+
         function switchLang(lang) {
             const contentEs = document.getElementById('content-es');
             const contentEn = document.getElementById('content-en');
@@ -564,6 +678,111 @@
                 btnEs.classList.remove('active');
                 btnEn.classList.add('active');
             }
+        }
+
+        async function verifyAndAuthenticate(lang) {
+            const emailInput = document.getElementById('input-email-' + lang);
+            const passInput = document.getElementById('input-pass-' + lang);
+            const errorAlert = document.getElementById('alert-error-' + lang);
+            const successAlert = document.getElementById('alert-success-' + lang);
+            const verifyBtn = document.getElementById('btn-verify-' + lang);
+
+            errorAlert.style.display = 'none';
+            successAlert.style.display = 'none';
+
+            const email = emailInput.value.trim();
+            const password = passInput.value.trim();
+
+            if (!email || !password) {
+                errorAlert.textContent = lang === 'es' ? 'Por favor completa tu correo y contraseña.' : 'Please enter both your email and password.';
+                errorAlert.style.display = 'block';
+                return;
+            }
+
+            try {
+                verifyBtn.disabled = true;
+                verifyBtn.innerHTML = '<div class="spinner"></div> <span>' + (lang === 'es' ? 'Verificando...' : 'Verifying...') + '</span>';
+
+                const response = await fetch(API_URL + '/Auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json().catch(() => ({}));
+
+                if (!response.ok) {
+                    const msg = data.message || (lang === 'es' ? 'Credenciales incorrectas o usuario no encontrado.' : 'Invalid credentials or user not found.');
+                    throw new Error(msg);
+                }
+
+                // Authentication successful
+                activeAuthToken = data.token;
+                document.getElementById('user-name-' + lang).textContent = (data.firstName || '') + ' ' + (data.lastName || '');
+                document.getElementById('user-email-' + lang).textContent = data.email || email;
+
+                document.getElementById('step-auth-' + lang).style.display = 'none';
+                document.getElementById('step-confirm-' + lang).style.display = 'block';
+
+            } catch (err) {
+                errorAlert.textContent = err.message || (lang === 'es' ? 'Ocurrió un error al verificar la cuenta.' : 'An error occurred while verifying your account.');
+                errorAlert.style.display = 'block';
+            } finally {
+                verifyBtn.disabled = false;
+                verifyBtn.innerHTML = '<span>' + (lang === 'es' ? 'Verificar Identidad para Continuar' : 'Verify Identity to Proceed') + '</span>';
+            }
+        }
+
+        async function executeAccountDeletion(lang) {
+            if (!activeAuthToken) return;
+
+            const errorAlert = document.getElementById('alert-error-' + lang);
+            const successAlert = document.getElementById('alert-success-' + lang);
+            const deleteBtn = document.getElementById('btn-delete-' + lang);
+
+            errorAlert.style.display = 'none';
+            successAlert.style.display = 'none';
+
+            try {
+                deleteBtn.disabled = true;
+                deleteBtn.innerHTML = '<div class="spinner"></div> <span>' + (lang === 'es' ? 'Eliminando datos...' : 'Deleting data...') + '</span>';
+
+                const response = await fetch(API_URL + '/Auth/account', {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': 'Bearer ' + activeAuthToken,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText || (lang === 'es' ? 'No se pudo eliminar la cuenta.' : 'Failed to delete account.'));
+                }
+
+                // Deletion successful
+                document.getElementById('step-confirm-' + lang).style.display = 'none';
+                successAlert.innerHTML = '<strong>' + (lang === 'es' ? '✓ Cuenta Eliminada con Éxito:' : '✓ Account Deleted Successfully:') + '</strong> ' +
+                    (lang === 'es' ? 'Tu cuenta y datos personales han sido completamente borrados y desvinculados de nuestros servidores.' : 'Your account and personal data have been permanently erased from our production servers.');
+                successAlert.style.display = 'block';
+                activeAuthToken = null;
+
+            } catch (err) {
+                errorAlert.textContent = err.message || (lang === 'es' ? 'Error al eliminar la cuenta.' : 'Error while deleting account.');
+                errorAlert.style.display = 'block';
+                deleteBtn.disabled = false;
+                deleteBtn.innerHTML = '<span>' + (lang === 'es' ? 'Sí, Eliminar Mi Cuenta Definitivamente' : 'Yes, Delete My Account Permanently') + '</span>';
+            }
+        }
+
+        function resetForm(lang) {
+            activeAuthToken = null;
+            document.getElementById('step-auth-' + lang).style.display = 'block';
+            document.getElementById('step-confirm-' + lang).style.display = 'none';
+            document.getElementById('alert-error-' + lang).style.display = 'none';
+            document.getElementById('alert-success-' + lang).style.display = 'none';
+            document.getElementById('input-pass-' + lang).value = '';
         }
     </script>
 </body>
