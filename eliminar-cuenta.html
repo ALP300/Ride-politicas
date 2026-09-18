@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | Privacy Policy - Ride Delivery</title>
+    <meta name="description"
+        content="Política de privacidad oficial y protección de datos para la aplicación Ride Delivery en Google Play Store.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004AAD;
+            --primary-dark: #003380;
+            --primary-light: #EBF3FF;
+            --success: #10B981;
+            --success-light: #ECFDF5;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --border: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 32px 20px;
+            box-shadow: 0 4px 20px rgba(0, 74, 173, 0.15);
+        }
+
+        .header-container {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .brand-text h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-text p {
+            font-size: 13px;
+            color: #BFDBFE;
+        }
+
+        .lang-toggle {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px;
+            border-radius: 10px;
+            gap: 4px;
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #FFFFFF;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 30px auto 0;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 36px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 24px 18px;
+            }
+        }
+
+        .badge-updated {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        h2.title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .intro {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .section {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .section:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F172A;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .section-num {
+            width: 26px;
+            height: 26px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        p,
+        li {
+            font-size: 14.5px;
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        ul,
+        ol {
+            padding-left: 22px;
+            margin-bottom: 14px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: var(--success-light);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 16px 20px;
+            border-radius: 12px;
+            color: #065F46;
+            font-size: 14px;
+            margin: 16px 0;
+        }
+
+        .highlight-box strong {
+            color: #047857;
+        }
+
+        .alert-box {
+            background: #FEF3C7;
+            border: 1px solid #FCD34D;
+            padding: 16px 20px;
+            border-radius: 12px;
+            color: #92400E;
+            font-size: 14px;
+            margin: 16px 0;
+        }
+
+        .contact-card {
+            background: #F1F5F9;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-top: 14px;
+            font-size: 14px;
+        }
+
+        .contact-card p {
+            margin-bottom: 4px;
+            color: #1E293B;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 36px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <div class="brand-icon">R</div>
+                <div class="brand-text">
+                    <h1>Ride Delivery</h1>
+                    <p>Servicio de Transporte Local / Local Transportation Service</p>
+                </div>
+            </div>
+            <div class="lang-toggle">
+                <button id="btn-es" class="lang-btn active" onclick="switchLang('es')">Español</button>
+                <button id="btn-en" class="lang-btn" onclick="switchLang('en')">English</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+
+            <!-- ================= SPANISH VERSION ================= -->
+            <div id="content-es">
+                <span class="badge-updated">Última actualización: Septiembre 2026</span>
+                <h2 class="title">Política de Privacidad</h2>
+                <p class="intro">
+                    En <strong>Ride Delivery</strong> (operado por La Casa Informática) valoramos y respetamos tu
+                    privacidad. Esta Política de Privacidad describe de forma clara y transparente cómo recopilamos,
+                    utilizamos, almacenamos y protegemos la información personal y datos de ubicación de los usuarios
+                    (pasajeros) y colaboradores (conductores) en nuestra aplicación móvil y plataforma tecnológica.
+                </p>
+
+                <!-- 1. Naturaleza del Servicio -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">1</span> Naturaleza de la Empresa y Servicio
+                    </h3>
+                    <p>
+                        <strong>Ride Delivery</strong> es una empresa que brinda servicios de transporte local y privado
+                        en su zona autorizada de operación. A diferencia de plataformas comisionistas masivas, Ride
+                        opera de manera directa con conductores colaboradores locales sin retener comisiones
+                        porcentuales por viaje, optimizando la asignación y coordinación de viajes a través de nuestra
+                        aplicación móvil.
+                    </p>
+                </div>
+
+                <!-- 2. Información que Recopilamos -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">2</span> Información que Recopilamos</h3>
+                    <p>Recopilamos únicamente los datos necesarios para brindar y coordinar el servicio de transporte:
+                    </p>
+                    <ul>
+                        <li><strong>Para Pasajeros:</strong> Nombre completo, número telefónico, correo electrónico y
+                            foto de perfil voluntaria.</li>
+                        <li><strong>Para Conductores:</strong> Nombre completo, correo, teléfono, fecha de nacimiento,
+                            código postal, licencia de conducir vigente de EE.UU., registro vehicular, póliza de seguro
+                            vehicular, antecedentes y los últimos 4 dígitos del Seguro Social (SSN) con fines de
+                            verificación de identidad.</li>
+                        <li><strong>Datos de Ubicación (GPS):</strong> Datos de geolocalización precisa mientras la
+                            aplicación está activa en primer plano para identificar puntos de recogida y destino,
+                            calcular rutas óptimas y monitorear el progreso del viaje en vivo.</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Permiso de Ubicación -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">3</span> Uso de la Ubicación del Dispositivo
+                        (GPS)</h3>
+                    <p>
+                        El acceso a la ubicación es indispensable para el funcionamiento de Ride Delivery. Recopilamos
+                        los datos de ubicación:
+                    </p>
+                    <ul>
+                        <li>Para mostrar los vehículos disponibles cercanos al punto del pasajero.</li>
+                        <li>Para calcular la distancia, tiempo estimado y tarifa del viaje.</li>
+                        <li>Para brindar navegación y seguimiento en tiempo real de la ruta durante un viaje activo.
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Transparencia:</strong> No recopilamos datos de ubicación cuando la aplicación se
+                        encuentra cerrada o el usuario no está en un servicio activo.
+                    </p>
+                </div>
+
+                <!-- 4. Compromiso de No Venta -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">4</span> Compromiso de No Venta de Información
+                    </h3>
+                    <div class="highlight-box">
+                        <strong>✓ Política Estricta de No Comercialización:</strong> Ride Delivery <strong>NO vende, NO
+                            alquila y NO comparte</strong> tu información personal, historial de viajes ni datos de
+                        ubicación a terceros, corredores de datos ni empresas de publicidad.
+                    </div>
+                    <p>
+                        Tu información se transmite únicamente de manera cifrada a través de protocolos seguros
+                        HTTPS/SSL y se almacena en bases de datos protegidas con altos estándares de seguridad
+                        tecnológica.
+                    </p>
+                </div>
+
+                <!-- 5. Permisos de Cámara y Archivos -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">5</span> Permisos de Cámara y Selección de Fotos
+                    </h3>
+                    <p>
+                        Nuestra aplicación solicita acceso a la cámara y al selector de fotos del sistema únicamente
+                        cuando el usuario decide subir o actualizar su foto de perfil, o cuando un conductor adjunta
+                        fotos de sus documentos reglamentarios (licencia, seguro, registro). La aplicación no accede a
+                        tus álbumes ni fotos personales sin tu acción explícita.
+                    </p>
+                </div>
+
+                <!-- 6. Eliminación de Cuenta y Datos -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">6</span> Derechos del Usuario y Eliminación de
+                        Cuenta</h3>
+                    <p>
+                        En cumplimiento con los requerimientos de seguridad de datos de Google Play, cualquier usuario o
+                        conductor tiene el derecho garantizado de solicitar la eliminación definitiva de su cuenta y
+                        todos sus datos asociados en cualquier momento:
+                    </p>
+                    <ul>
+                        <li><strong>Dentro de la aplicación:</strong> Ve a tu <em>Perfil &gt; Ajustes</em> y presiona el
+                            botón <strong>"Eliminar Cuenta Definitivamente"</strong>. Tu cuenta y datos se eliminarán de
+                            inmediato.</li>
+                        <li><strong>Por correo electrónico o soporte:</strong> Envía una solicitud a nuestro equipo
+                            indicando tu correo o teléfono registrado.</li>
+                    </ul>
+                    <p>
+                        Al solicitar la eliminación, se borrarán de forma permanente tu perfil, credenciales, historial
+                        de ubicaciones y fotos de documentos. Únicamente se conservarán los comprobantes contables
+                        legalmente exigidos por las autoridades tributarias aplicables.
+                    </p>
+                </div>
+
+                <!-- 7. Contacto -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">7</span> Contacto de Soporte y Privacidad</h3>
+                    <p>Si tienes cualquier pregunta, duda o solicitud con respecto a tus datos personales o esta
+                        política, puedes contactarnos:</p>
+                    <div class="contact-card">
+                        <p><strong>Entidad Responsable:</strong> Ride Delivery</p>
+                        <p><strong>Desarrollo:</strong> La Casa Informática</p>
+                        <p><strong>Correo electrónico de soporte:</strong> <a
+                                href="mailto:soporte@ridedelivery.com">soporte@ridedelivery.com</a></p>
+                        <p><strong>Operación:</strong> Servicio de Transporte Local en Estados Unidos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= ENGLISH VERSION ================= -->
+            <div id="content-en" style="display: none;">
+                <span class="badge-updated">Last updated: September 2026</span>
+                <h2 class="title">Privacy Policy</h2>
+                <p class="intro">
+                    At <strong>Ride Delivery</strong> (operated by La Casa Informática), we value and respect your
+                    privacy. This Privacy Policy clearly describes how we collect, use, store, and protect the personal
+                    data and location information of passengers and driver partners on our mobile application and
+                    technology platform.
+                </p>
+
+                <!-- 1. Nature of Service -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">1</span> Nature of the Company &amp; Service
+                    </h3>
+                    <p>
+                        <strong>Ride Delivery</strong> is a local and private transportation service operating within
+                        its authorized local zone. Unlike mass aggregator platforms, Ride operates directly with local
+                        partner drivers without charging commission percentages per ride, optimizing ride dispatch and
+                        coordination through our mobile app.
+                    </p>
+                </div>
+
+                <!-- 2. Data We Collect -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">2</span> Information We Collect</h3>
+                    <p>We collect only the information strictly required to coordinate and provide transportation
+                        services:</p>
+                    <ul>
+                        <li><strong>For Passengers:</strong> Full name, phone number, email address, and voluntary
+                            profile photo.</li>
+                        <li><strong>For Drivers:</strong> Full name, email, phone number, date of birth, postal code,
+                            valid U.S. Driver's License, vehicle registration, proof of insurance, background check
+                            record, and the last 4 digits of Social Security Number (SSN) for identity verification.
+                        </li>
+                        <li><strong>Location Data (GPS):</strong> Precise geolocation data while the app is in the
+                            foreground to detect pickup and destination points, calculate optimal routes, and track
+                            ongoing trip progress in real-time.</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Location Access -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">3</span> Device Location Usage (GPS)</h3>
+                    <p>
+                        Location access is essential for Ride Delivery to function. We collect location data:
+                    </p>
+                    <ul>
+                        <li>To display available partner vehicles near the passenger's pickup location.</li>
+                        <li>To calculate distance, estimated time of arrival, and fare estimates.</li>
+                        <li>To provide live turn-by-turn route tracking during an active ride.</li>
+                    </ul>
+                    <p>
+                        <strong>Notice:</strong> We do not track or collect location data when the application is closed
+                        or when the user is not engaged in an active transportation service.
+                    </p>
+                </div>
+
+                <!-- 4. No Sale Policy -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">4</span> Data Protection &amp; No-Sale
+                        Commitment</h3>
+                    <div class="highlight-box">
+                        <strong>✓ Strict No-Sale Policy:</strong> Ride Delivery <strong>DOES NOT sell, rent, or
+                            trade</strong> your personal information, trip history, or location data to third parties,
+                        data brokers, or advertising networks.
+                    </div>
+                    <p>
+                        All sensitive information is encrypted in transit using bank-grade HTTPS/TLS protocols and
+                        stored in secure cloud infrastructure with strict access controls.
+                    </p>
+                </div>
+
+                <!-- 5. Camera & Photos -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">5</span> Camera &amp; Photo Library Permissions
+                    </h3>
+                    <p>
+                        Our app requests access to the camera and system photo picker solely when the user chooses to
+                        take or select a profile photo, or when a driver uploads photos of verification documents
+                        (driver's license, insurance, registration). The application never accesses personal albums
+                        without your explicit action.
+                    </p>
+                </div>
+
+                <!-- 6. Account Deletion -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">6</span> User Rights &amp; Account Deletion</h3>
+                    <p>
+                        In compliance with Google Play Data Safety policies, any user or driver partner has the
+                        guaranteed right to request the permanent deletion of their account and associated personal data
+                        at any time:
+                    </p>
+                    <ul>
+                        <li><strong>In-App Deletion:</strong> Go to <em>Profile &gt; Settings</em> and tap the button
+                            <strong>"Eliminar Cuenta Definitivamente" (Delete Account Permanently)</strong>. Your
+                            account and personal data will be purged immediately.</li>
+                        <li><strong>Via Support Request:</strong> Send an email to our support team with your registered
+                            email or phone number.</li>
+                    </ul>
+                    <p>
+                        Upon deletion, your profile, authentication tokens, location logs, and document photos are
+                        permanently erased. Only necessary transaction receipts required by applicable tax or legal
+                        regulations are retained.
+                    </p>
+                </div>
+
+                <!-- 7. Contact -->
+                <div class="section">
+                    <h3 class="section-title"><span class="section-num">7</span> Privacy &amp; Support Contact</h3>
+                    <p>If you have any questions or requests regarding your personal data or this policy, please reach
+                        out to us:</p>
+                    <div class="contact-card">
+                        <p><strong>Service Provider:</strong> Ride Delivery</p>
+                        <p><strong>Developer:</strong> La Casa Informática</p>
+                        <p><strong>Support Email:</strong> <a
+                                href="mailto:soporte@ridedelivery.com">soporte@ridedelivery.com</a></p>
+                        <p><strong>Service Area:</strong> Local Transportation Service in the United States</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            &copy; 2026 Ride Delivery. Todos los derechos reservados / All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const contentEs = document.getElementById('content-es');
+            const contentEn = document.getElementById('content-en');
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'es') {
+                contentEs.style.display = 'block';
+                contentEn.style.display = 'none';
+                btnEs.classList.add('active');
+                btnEn.classList.remove('active');
+            } else {
+                contentEs.style.display = 'none';
+                contentEn.style.display = 'block';
+                btnEs.classList.remove('active');
+                btnEn.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
